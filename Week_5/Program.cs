@@ -61,8 +61,8 @@ foreach(var product in products)
 
 #region Read-Single
 
-Product product1 = _context.Products.Where(x => x.Title.Contains("Black")).FirstOrDefault();
+Product product2 = _context.Products.Where(x => x.Title.Contains("Black")).FirstOrDefault();
 
-Console.WriteLine($"{product1.Title} - {product1.Price}");
+Console.WriteLine($"{product2.Title} - {product2.Price}");
 
 #endregion

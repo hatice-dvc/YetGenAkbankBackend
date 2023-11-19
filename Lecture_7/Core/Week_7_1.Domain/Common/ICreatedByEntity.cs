@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Week_7_1.Domain.Common
 {
-    internal interface ICreatedByEntity
+    public interface ICreatedByEntity
     {
+        DateTime CreatedOn { get; set; }
+        string CreatedByUserId { get; set; }
     }
 }

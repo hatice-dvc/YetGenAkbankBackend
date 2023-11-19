@@ -15,11 +15,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentatio
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Productify.MVC", "Presentation\Productify.MVC\Productify.MVC.csproj", "{3F6D36D1-5D0D-4242-A032-4BDD74D8B937}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Productify.Domain", "Core\Productify.Domain\Productify.Domain.csproj", "{8ADEFF4E-BA8C-4A4F-8F8D-1676262549FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Productify.Domain", "Core\Productify.Domain\Productify.Domain.csproj", "{8ADEFF4E-BA8C-4A4F-8F8D-1676262549FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Productify.Persistence", "Infrastructure\Productify.Persistence\Productify.Persistence.csproj", "{F62D9B7E-6D3F-4800-91EA-A88536CB9388}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Productify.Persistence", "Infrastructure\Productify.Persistence\Productify.Persistence.csproj", "{F62D9B7E-6D3F-4800-91EA-A88536CB9388}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YetGenAkbankJump.MVCClient", "YetGenAkbankJump\YetGenAkbankJump.MVCClient.csproj", "{49CFF058-8166-4FA8-9601-B30473D9219A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YetGenAkbankJump.MVCClient", "YetGenAkbankJump\YetGenAkbankJump.MVCClient.csproj", "{49CFF058-8166-4FA8-9601-B30473D9219A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lecture_7", "Lecture_7", "{633E5EF5-2898-4CE5-BB0F-21CC8D9E47F8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{01F95670-2EC0-46B8-B4DD-E718ED0D25F0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{64670D8D-A2D0-48EF-88AC-9BB7F88D2F69}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{86E685F7-E817-40C0-B574-59659D39754B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week_7_1.Domain", "Lecture_7\Core\Week_7_1.Domain\Week_7_1.Domain.csproj", "{46AF19F7-944F-4315-A8B8-64FA08743FCE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +57,10 @@ Global
 		{49CFF058-8166-4FA8-9601-B30473D9219A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49CFF058-8166-4FA8-9601-B30473D9219A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49CFF058-8166-4FA8-9601-B30473D9219A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46AF19F7-944F-4315-A8B8-64FA08743FCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46AF19F7-944F-4315-A8B8-64FA08743FCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46AF19F7-944F-4315-A8B8-64FA08743FCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46AF19F7-944F-4315-A8B8-64FA08743FCE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,6 +72,10 @@ Global
 		{3F6D36D1-5D0D-4242-A032-4BDD74D8B937} = {EC65ED11-D307-400E-990B-F8895F1EAFEC}
 		{8ADEFF4E-BA8C-4A4F-8F8D-1676262549FA} = {E5304F31-704F-44EC-AC03-3544C7859836}
 		{F62D9B7E-6D3F-4800-91EA-A88536CB9388} = {71467D71-90C3-4505-BD91-6273BA9347B0}
+		{01F95670-2EC0-46B8-B4DD-E718ED0D25F0} = {633E5EF5-2898-4CE5-BB0F-21CC8D9E47F8}
+		{64670D8D-A2D0-48EF-88AC-9BB7F88D2F69} = {633E5EF5-2898-4CE5-BB0F-21CC8D9E47F8}
+		{86E685F7-E817-40C0-B574-59659D39754B} = {633E5EF5-2898-4CE5-BB0F-21CC8D9E47F8}
+		{46AF19F7-944F-4315-A8B8-64FA08743FCE} = {01F95670-2EC0-46B8-B4DD-E718ED0D25F0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {27072FDA-1994-4BAE-95F5-CC643ADA1157}

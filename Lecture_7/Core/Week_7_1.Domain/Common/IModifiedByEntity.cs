@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Week_7_1.Domain.Common
 {
-    internal interface IModifiedByEntity
+    public interface IModifiedByEntity
     {
+        DateTime? ModifiedOn { get; set; }
+        string? ModifiedByUserId { get; set; }
     }
 }

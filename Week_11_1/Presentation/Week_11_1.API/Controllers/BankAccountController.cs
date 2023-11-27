@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Query;
+using Week_11_1.API.Models;
 using Week_11_1.Domain.Entities;
 using Week_11_1.Persistance.Contexts;
 
@@ -16,7 +18,7 @@ namespace Week_11_1.API.Controllers
             _perfectAppDbContext = perfectAppDbContext;
         }
         [HttpPost("[action]")]
-        public void SetDefaultUsersData()
+        public IActionResult SetDefaultUsersData()
         {
             List<BankAccount> people = new()
             {
@@ -34,19 +36,34 @@ namespace Week_11_1.API.Controllers
 
             };
 
+            foreach (var person in people)
+            {
+                if (string.IsNullOrWhiteSpace(person.FirstName) || string.IsNullOrWhiteSpace(person.LastName))
+                {
+                    return BadRequest("First name, last name, and phone number are required.");
+                }
+            }
+
             _perfectAppDbContext.People.AddRange(people);
 
             _perfectAppDbContext.SaveChanges();
         }
 
-        /*
+        
         [HttpGet("[action]/{bankAccountId:guid}")]
-        public void GetBankAccountData(Guid bankAccountId)
+        public GetBankAccountDataResponseModel GetBankAccountData(Guid bankAccountId)
         {
-            var bankaccount = _perfectAppDbContext.BankAccounts.FirstOrDefault(x => x.Id == bankAccountId);
+            var bankaccount = _perfectAppDbContext.BankAccount.FirstOrDefault(x => x.Id == bankAccountId);
 
-            return $"{bankAccountId.FirstName} - {bankAccountId.LastName} - {bankAccountId.Balance}";
+            var response = new GetBankAccountDataResponseModel()
+            {
+                FirstName = bankaccount.FirstName,
+                LastName = bankaccount.LastName,
+                Balance = bankaccount.Balance,
+            };
+
+            return response;
         }
-        */
+        
     }
 }
